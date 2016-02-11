@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block followers %}
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+
+<div class="row" style="min-height:100vh;">
+    <div class="col-md-10 col-md-offset-1 text-center" style="padding-top:10vh; font-weight:300">
+    </div>
+    <div class="container">
+      <div class="starter-template">
+        <div class="row" style="height:100vh;margin-top:10vh;">
+                <div class="col-md-10 col-md-offset-1">
+                    <table class="table" id ="folrank">
+                      <thead>
+                        <tr>
+                          <th>User</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for val in followers %}
+                        <tr>
+                            <td><a href='www.github.com/'>{{val.login}}</a></td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                </div>
+        </div>
+      </div>
+
+
+    </div>
+</div>
+{% endblock %}

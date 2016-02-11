@@ -1,0 +1,33 @@
+{% extends "base.html" %} <!--this means that you are extending the base tempate -->
+{% block users %} <!-- this is the name of the block below -->
+
+<link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
+
+<div class="row" style="min-height:100vh;">
+    <div class="col-md-10 col-md-offset-1 text-center" style="padding-top:10vh; font-weight:300">
+     <h2>Top 10 Contributors</h2>
+    </div>
+    <div class="container">
+      <div class="starter-template">
+        <div class="row" style="height:100vh;margin-top:10vh;">
+                <div class="col-md-10 col-md-offset-1">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>User</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for val in users %}
+                        <tr>
+                            <td><a href='http://www.github.com/'+ val target="_blank">{{val}}</a></td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

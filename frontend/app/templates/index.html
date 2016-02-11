@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block index %}
+
+<style type=text/css>
+    background-image: url("static/images/back.jpg");
+</style>
+
+    <div class="container">
+      <div class="starter-template">
+          <div>
+           <p> Networks are all around us. Our position and connections within these networks deeply influences the way we think and act.
+Github is social network for coding. Analyzing GitHub connections based on the user activity on repositories, we can identify sources of influences in specific network, and we can find the communities that these connections form. These are couple of examples that I am trying to find an answer to.
+
+            </p>
+          </div>
+           <form action="/graph" method="POST">
+          <div class="form-group text-center">
+                                        <br /><br />
+                                        <input type="text" class="form-control" id="login" name="login" placeholder="Type in an login">
+                                        <br /><br />
+                                        <button type="submit" value="Send" name="emailid-container" class="btn btn-default id-submit">Submit</button>
+      </div>
+           </form>
+    </div>
+{% endblock %}
