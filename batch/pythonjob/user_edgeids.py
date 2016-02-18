@@ -4,7 +4,7 @@ from pyspark.sql import SQLContext
 
 # getting master node's IP and public DNS to run Spark job and read from HDFS
 namenode_path = "hdfs://52.89.26.208:9000"
-file_path = "/data/github/hourly/events/2015-08-31-5.json"
+file_path = "/data/github/hourly/events/*.json"
 edgePath = "/data/graphPersist/UserRepoGraph/edgeFile/"
 
 SparkContext.setSystemProperty('spark.executor.memory', '4g')
@@ -26,14 +26,3 @@ usr_repo = repo_rdd.map(lambda x: filter(None,itertools.combinations(map(str,lis
 usr_repo = repo_rdd.map(lambda x: filter(None,itertools.combinations(filter(None,map(str,list(set([repo for sublist in x[1] for repo in sublist]))),2))))
 
 usr_repo.saveAsTextFile(namenode_path + edgePath)
-
-# #insert in DB
-# from cassandra.cluster import Cluster
-# cascluster = Cluster(['52.89.41.128', '52.89.60.184', '52.89.60.239', '52.89.26.208'])
-# casSession = cascluster.connect('community')
-#
-# for item in repo_user_map:
-#     casSession.execute('INSERT INTO community.eventrepousermap(repository, user_commit) VALUES (%s, %s)',(item, {repo_user_map[item][0]:repo_user_map[item][1]}))
-#
-# casSession.shutdown()
-# cascluster.shutdown()
