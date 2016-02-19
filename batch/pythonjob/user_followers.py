@@ -7,12 +7,12 @@ from pyspark.sql import SQLContext
 from pyspark.sql.types import *
 import com.databricks.spark.csv._
 
-namenode_path = "hdfs://52.89.26.208:9000"
-#/data/github/txt/fol/followers_c10.csv
-file_path = "/data/github/txt/fol/followers_c*.csv"
+master_ip = os.environ['master_ip']  
+namenode_path = os.environ['name_node']
+file_path = "/data/github/txt/fol/followers_*.csv"
 
 # setting SparkContext and SQLContext
-sc = SparkContext("spark://52.89.26.208:7077", "followers")
+sc = SparkContext("spark://"+master_ip+":7077", "followers")
 sqlContext = SQLContext(sc)
 
 df_followers = sqlContext.read.format('com.databricks.spark.csv').options(header='true').load(namenode_path + file_path)
