@@ -5,10 +5,10 @@ The project is meant to showcase my learning experience of implementing a big da
 
 ##Introduction
 
-Networks are all around us and our interation and connections within these networks deeply influences the way we think and act. By analyzing these connections we can identify sources of influences in the network, and find the communities that these connections form. 
+Networks are all around us and our interation and connections within these networks deeply influences the way we think and act. By analyzing these connections we can identify sources of influences in the network, and find the communities that these connections form. I am finding clusters in github network and finding the top contributors in the network based on the push event on the repositories.
 
 ##Data
-Got over a tera-byte of data from Git Archive.
+Tera-byte of data from Git Archive.
 
 ##Ingestion
 Data was sanitized by usign Python scripts. And stored in HDFS.
@@ -20,7 +20,7 @@ The batch processing is done in 2 steps.
 2) In the second job Graph is created using GraphX, and algorithm like PageRank and Connected Componends were applied.
 
 ##PipeLine
-![alt tag]()
+![alt tag](https://github.com/zenachaturvedi/GitConnect/tree/master/misc/pipeline.png)
 
 ##Future Extension
 Generate communities
