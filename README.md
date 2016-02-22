@@ -15,8 +15,8 @@ Networks are all around us and our connections within these networks deeply infl
 * ~112 million total events processed
 
 ##AWS Clusters
-5 m4.xlarge for Spark Cluster
-4 m4.large for HDFS, Cassndra
+* 5 m4.xlarge for Spark Cluster
+* 4 m4.large for HDFS, Cassndra
 
 ##Ingestion
 Data was sanitized by using Python scripts and stored in HDFS.
