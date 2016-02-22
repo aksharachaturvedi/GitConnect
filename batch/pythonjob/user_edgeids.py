@@ -10,7 +10,7 @@ file_path = "/data/github/hourly/events/*.json"
 edgePath = "/data/graphPersist/UserRepoGraph/edgeFile/"
 SparkContext.setSystemProperty('spark.executor.memory', '4g')
 
-sc = SparkContext("spark://"+master_ip +":7077", "eventRepoUser")
+sc = SparkContext("spark://"+master_ip +":7077", "EdgeProcesing")
 sqlContext = SQLContext(sc)
 
 df_events = sqlContext.read.json(namenode_path + file_path)
