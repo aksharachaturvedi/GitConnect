@@ -20,7 +20,7 @@ The batch processing is done in 2 steps.
 2) In the second job Graph is created using GraphX, and algorithm like PageRank and Connected Componends were applied.
 
 ##PipeLine
-![alt tag](https://github.com/zenachaturvedi/GitConnect/tree/master/misc/pipeline.png)
+![alt tag](https://github.com/zenachaturvedi/GitConnect/misc/pipeline.png?raw=true "Pipeline")
 
 ##Future Extension
 Generate communities
