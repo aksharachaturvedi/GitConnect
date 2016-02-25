@@ -1,3 +1,6 @@
+TODO: update the repository with the code for graph creationg and processing.
+Add data aggrefation script to repo
+
 # gitConnect
 Analysing github connections and repositories (Finding Clusters)
 
